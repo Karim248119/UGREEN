@@ -13,9 +13,47 @@
     --foreground: #ededed;
   }
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+@keyframes textUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animated-text {
+  animation: textUp 1s ease-out;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+}
+
+p {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #aeaeae;
+}
+h2 {
+  -webkit-text-stroke: 1px #ffffff;
+}
+.hollow {
+  -webkit-text-stroke: 1px #ffffff;
+}
+.text-outline-main {
+  -webkit-text-stroke: 1px var(--main-color--);
 }
