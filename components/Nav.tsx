@@ -1,16 +1,11 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { IoCartOutline, IoCloseOutline } from "react-icons/io5";
 import { HiBars3 } from "react-icons/hi2";
-import { CiSearch, CiUser } from "react-icons/ci";
+import { CiUser } from "react-icons/ci";
 import Logo from "./Logo";
-import { BsHandbag } from "react-icons/bs";
-import { motion } from "framer-motion";
-import { toTop } from "@/lib/Animations";
-import { PiCarThin } from "react-icons/pi";
 
 export default function Navbar() {
   const [IsOpened, setIsOpened] = useState(false);
@@ -38,7 +33,7 @@ export default function Navbar() {
     },
   ];
   return (
-    <nav className={` absolute top-0 left-0 w-full z-50 `}>
+    <nav className={` absolute top-0 left-0 w-full z-50 bg-primary`}>
       <div className=" text-sm z-50 bg-dark">
         <div className=" md:h-20 h-20 w-full flex justify-between  items-center flex-row px-4 md:px-20 text-accent z-30">
           <div className="flex items-center text-lg">
@@ -47,11 +42,7 @@ export default function Navbar() {
           <div className="sm:flex justify-center items-center gap-5 hidden">
             {Links.map((link, idx) => {
               return (
-                <motion.div
-                  key={idx}
-                  {...toTop}
-                  transition={{ duration: (idx + 1) * 0.2, ease: "linear" }}
-                >
+                <div key={idx}>
                   <Link
                     href={link.path}
                     className={`${
@@ -62,17 +53,17 @@ export default function Navbar() {
                       {link.name}
                     </p>
                   </Link>
-                </motion.div>
+                </div>
               );
             })}
           </div>
           <div className=" flex gap-2">
-            <motion.button {...toTop} transition={{ duration: 8 * 0.2 }}>
+            <button>
               <CiUser size={22} />
-            </motion.button>
-            <motion.button {...toTop} transition={{ duration: 9 * 0.2 }}>
+            </button>
+            <button>
               <IoCartOutline size={22} className="text-white/80" />
-            </motion.button>
+            </button>
           </div>
           <button className="md:hidden" onClick={() => setIsOpened(!IsOpened)}>
             {IsOpened ? <IoCloseOutline size={25} /> : <HiBars3 size={25} />}
