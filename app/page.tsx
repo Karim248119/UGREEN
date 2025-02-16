@@ -1,4 +1,3 @@
-import Model from "@/components/Model";
 import Hero from "./sections/Hero";
 import Material from "./sections/Material";
 import Charger from "./sections/Charger";
