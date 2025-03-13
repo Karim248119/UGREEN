@@ -16,10 +16,10 @@ export default function Charger() {
           </p>
         </div>
         <div className="h-screen w-full overflow-hidden relative bg-primary z-20">
-          <div className="h-[120vh]">
+          <div className="h-[120vh] w-full">
             <Spline
               scene="https://prod.spline.design/kvgm4asz4Hn9QqpV/scene.splinecode"
-              className="-ml-8"
+              className="md:-ml-8 bg-green-200 pr-8"
             />
           </div>
         </div>

@@ -33,9 +33,9 @@ export default function Navbar() {
     },
   ];
   return (
-    <nav className={` absolute top-0 left-0 w-full z-50 bg-primary`}>
+    <nav className={` absolute top-0 left-0 w-full z-50 bg-primary `}>
       <div className=" text-sm z-50 bg-dark">
-        <div className=" md:h-20 h-20 w-full flex justify-between  items-center flex-row px-4 md:px-20 text-accent z-30">
+        <div className=" md:h-20 h-20 w-full flex justify-between  items-center flex-row px-4 md:px-20 bg-primary  text-accent z-30">
           <div className="flex items-center text-lg">
             <Logo className="md:text-3xl text-xl" />
           </div>
@@ -57,7 +57,7 @@ export default function Navbar() {
               );
             })}
           </div>
-          <div className=" flex gap-2">
+          <div className="md:flex hidden gap-2 ">
             <button>
               <CiUser size={22} />
             </button>
@@ -72,9 +72,8 @@ export default function Navbar() {
         <div
           className={`${
             IsOpened ? " top-14" : "-top-44"
-          } w-[100vw] flex flex-col items-center justify-center pb-3 overflow-hidden navs sm:hidden  -z-20 bg-dark text-xs text-center gap-2 font-semibold fixed  transition-all ease duration-700`}
+          } w-[100vw] flex flex-col items-center justify-center pb-3 overflow-hidden navs sm:hidden bg-primary z-20 bg-dark text-xs text-center gap-2 font-semibold fixed  transition-all ease duration-700`}
         >
-          <div className=" -mt-10 mb-10"></div>
           {Links.map((link) => {
             return (
               <Link

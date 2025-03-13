@@ -6,8 +6,13 @@ export default function Color() {
     <section id="models" className="min-h-screen w-full ">
       <div className="w-full h-full md:grid grid-cols-2 ">
         <div className="h-screen w-full overflow-hidden relative bg-primary z-20">
-          <div className="h-[120vh]">
-            <Spline scene="https://prod.spline.design/cVtwg880JECXupT1/scene.splinecode" />
+          <div className=" w-full h-screen flex justify-center items-center">
+            <div className="md:h-[60vh] h-[65vh] md:w-[25vw] overflow-hidden flex justify-center items-center">
+              <Spline
+                scene="https://prod.spline.design/cVtwg880JECXupT1/scene.splinecode"
+                className=" md:scale-100 m-auto w-1/2 "
+              />
+            </div>
           </div>
         </div>
         <div className="bg-primary z-20 flex flex-col justify-center md:gap-10 gap-5 md:px-20 px-5">
