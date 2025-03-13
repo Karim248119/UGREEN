@@ -19,7 +19,7 @@ export default function Charger() {
           <div className="h-[120vh] w-full">
             <Spline
               scene="https://prod.spline.design/kvgm4asz4Hn9QqpV/scene.splinecode"
-              className="md:-ml-8 bg-green-200 pr-8"
+              className="md:-ml-8  pr-8"
             />
           </div>
         </div>
